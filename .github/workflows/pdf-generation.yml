@@ -28,8 +28,9 @@ jobs:
         run: |
           pandoc README.md \
             -o _site/whitepaper.pdf \
+            -f gfm \
             --pdf-engine=weasyprint \
-            --metadata title="Whitepaper"
+            --metadata title="Trestle DeFi Whitepaper"
 
       - name: Generate Git Pages Index Page
         run: |
