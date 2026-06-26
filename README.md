@@ -70,6 +70,8 @@ To ensure governance remains in the hands of **long-term supporters**, the **Gov
 
 **Security over Speed**. Trestle Platform follows a **milestone-driven roadmap**, utilizing a **dedicated Bug Bounty fund** to collaborate with global developers. By launching staking on **Mainnet** while perfecting the Marketplace on **Testnet**, we ensure a **robust, audited, and community-backed ecosystem**.
 
+Core smart contracts are open source and verified on-chain. Proprietary frontend and backend logic remain closed to protect user data and business logic during the beta phase.
+
 ---
 
 ## Vision and Mission
@@ -158,12 +160,11 @@ While Trestle begins with **digital goods and freelancer services**, the Platfor
 - **Tokenize fractional shares** of real estate, bonds, and other high-value assets.
 - **Trade RWA tokens** on the Trestle Marketplace, bringing **institutional-grade opportunities** to everyday users.
 - **Earn passive income** from RWA-backed assets, such as rental yields or bond interest.
-- **RWA Status**:
 
-Current: Infrastructure planned (Oracle, AI verification).
-Launch: Post-Mainnet Marketplace (Phase 4).
-Compliance: Awaiting legal framework finalization.
-
+**RWA Status:**
+- **Current:** Infrastructure planned (Oracle, AI verification).
+- **Launch:** Post-Mainnet Marketplace (Phase 4).
+- **Compliance:** Awaiting legal framework finalization.
 
 #### Key Features for RWA
 
@@ -182,7 +183,7 @@ Compliance: Awaiting legal framework finalization.
 
 | Token | Total Supply | Distribution |
 |-------|-------------|--------------|
-| hNOBT | 1,000,000,000 | hNOBT Specifics: Phase 1 Status: Untradable. Supply: Dynamic/Massminted via tasks. Utility: Exclusive to Telegram Mini-App rewards and profile boosting until Phase 2. |
+| hNOBT | 1,000,000,000 | Phase 1: Untradable. Dynamic supply via tasks. Utility: TMA rewards and profile boosting (until Mainnet Marketplace). |
 | BroilerPlus | 1 Quadrillion (1,000,000,000,000,000) | 50% Staking Rewards <br> 25% Liquidity Providers <br> 15% Treasury <br> 10% Team & Advisors |
 | Governance Token | 1,000,000 | 100% Earned via Vault Staking (No ICO, No Public Sale) |
 
@@ -395,21 +396,17 @@ getPrice() = startingPrice - (discountRate × timeElapsed)
 
 ---
 
-### "Audit & Security" Status
+### Audit & Security Status
 
-**"Security" section:**
-**Security Status:**
-**Security & Testing Strategy (Current Phase)**
-- Phase: Testnet (Amoy) Beta.
-- Approach: Community-Driven Audit & Bug Bounties.
+**Phase:** Testnet (Amoy) Beta
+**Approach:** Community-Driven Audit & Bug Bounties
+
 **Rewards:**
-- Critical Bugs: Earn Governance Points and "Security Scout" status (priority allocation for future Governance Token airdrop).
-- High/Medium Bugs: Earn hNOBT points via the Telegram Reward Hub.
-- Reporting: All vulnerabilities must be reported via our Discord Security Channel or GitHub Issues (Private).
-- Hall of Fame: Top contributors will be permanently listed in the protocol's "Security Contributors" section.
-- Future: Upon Mainnet launch with TVL, the program will transition to a cash-based bounty via Immunefi or similar platforms.
-
-
+- **Critical Bugs:** Governance Points + "Security Scout" status (priority allocation for future Governance Token airdrop).
+- **High/Medium Bugs:** hNOBT points via the Telegram Reward Hub.
+- **Reporting:** All vulnerabilities via Discord Security Channel or GitHub Issues (Private).
+- **Hall of Fame:** Top contributors listed permanently in the Security Contributors section.
+- **Future:** Upon Mainnet launch with TVL, transitions to a cash-based bounty via Immunefi or similar platforms.
 
 ## Social Media and Resources
 

@@ -40,18 +40,33 @@ jobs:
           <head>
               <meta charset="UTF-8">
               <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <title>Whitepaper Project</title>
+              <title>Trestle DeFi Whitepaper</title>
               <style>
-                  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; max-width: 600px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #333; }
-                  h1 { border-bottom: 2px solid #eee; padding-bottom: 10px; }
-                  .btn { display: inline-block; background: #0066cc; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 15px; }
-                  .btn:hover { background: #0052a3; }
+                  * { margin: 0; padding: 0; box-sizing: border-box; }
+                  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 50%, #d1fae5 100%); color: #1f2937; }
+                  .card { max-width: 520px; width: 90%; background: white; border-radius: 20px; padding: 48px 40px; text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.04); border: 1px solid rgba(16,185,129,0.15); }
+                  .logo { font-size: 28px; margin-bottom: 8px; }
+                  h1 { font-size: 28px; font-weight: 700; color: #111827; margin-bottom: 12px; }
+                  p { font-size: 15px; color: #6b7280; line-height: 1.7; margin-bottom: 32px; }
+                  .btn-row { display: flex; flex-direction: column; gap: 12px; }
+                  .btn-primary { display: block; background: #059669; color: white; padding: 14px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; font-size: 15px; transition: background 0.2s, transform 0.15s; }
+                  .btn-primary:hover { background: #047857; transform: translateY(-1px); }
+                  .btn-secondary { display: block; background: transparent; color: #059669; padding: 14px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; font-size: 15px; border: 2px solid #059669; transition: background 0.2s; }
+                  .btn-secondary:hover { background: #f0fdf4; }
+                  .footer { margin-top: 32px; font-size: 13px; color: #9ca3af; }
               </style>
           </head>
           <body>
-              <h1>Whitepaper Project</h1>
-              <p>The latest version of the whitepaper has been successfully compiled from the repository README with full SVG graphic support.</p>
-              <a href="whitepaper.pdf" class="btn" download>Download PDF Whitepaper</a>
+              <div class="card">
+                  <div class="logo">📄</div>
+                  <h1>Trestle DeFi Whitepaper</h1>
+                  <p>The complete Trestle DeFi whitepaper — covering the Stake-Mine-Vault flywheel, Dutch auction marketplace, milestone escrow, governance model, and tokenomics — compiled with full SVG graphics.</p>
+                  <div class="btn-row">
+                      <a href="https://github.com/Trestle-DeFi/trestle-whitepaper" class="btn-primary" target="_blank">Read Online</a>
+                      <a href="whitepaper.pdf" class="btn-secondary" download>Download PDF</a>
+                  </div>
+                  <div class="footer">Version 1.0 &middot; Trestle DeFi</div>
+              </div>
           </body>
           </html>
           EOF
