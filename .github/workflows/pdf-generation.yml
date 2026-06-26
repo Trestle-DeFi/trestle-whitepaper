@@ -1,0 +1,49 @@
+name: Generate Whitepaper PDF
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+    container: pandoc/latex:3.1
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Install SVG support
+        run: |
+          apt-get update && apt-get install -y librsvg2-bin
+
+      - name: Generate PDF from Markdown
+        run: |
+          pandoc README.md \
+            --metadata title="Trestle DeFi Whitepaper" \
+            --metadata author="Trestle DeFi" \
+            --metadata date="June 2026" \
+            --pdf-engine=xelatex \
+            -o assets/Trestle-Whitepaper-v1.1.pdf \
+            --standalone \
+            --toc \
+            --toc-depth=3 \
+            -V geometry:margin=1in
+
+      - name: Rename PDF for Consistency
+        run: |
+          mv assets/Trestle-Whitepaper-v1.1.pdf assets/whitepaper.pdf || echo "PDF generation failed or file missing"
+
+      - name: Upload PDF to Repo
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-generated PDF from Markdown"
+          file_pattern: assets/*.pdf
+          create_branch: false
+
+      - name: Upload Artifact (Backup)
+        uses: actions/upload-artifact@v4
+        with:
+          name: whitepaper-pdf
+          path: assets/
