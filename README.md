@@ -317,15 +317,6 @@ Trestle Platform uses **Cloudflare Workers** with a **serverless microservices a
 
 ## Current Projects and Progress
 
-### Core Staking Contracts (Upgradeable UUPS — Deployed 2026-07-07)
-
-The V1 and V2 contracts have been replaced by **upgradeable core contracts** using the UUPS proxy pattern (ERC-1967). All V1/V2 stakes have been successfully withdrawn. The legacy V1/V2 contracts are now drained and unused.
-
-| Contract | Core Proxy (Live) |
-|----------|-------------------|
-| hNobtCoreStaking | `0x1d7d8a7B24Be9ecc692f36c7C01486EfF6c689d7` |
-| BroilerCoreStaking | `0xF68A17c7e15174D55AFDb2EF7669Ad04F561AD48` |
-
 ### Deployed Contracts
 
 | Contract | Address | Purpose |
@@ -335,8 +326,8 @@ The V1 and V2 contracts have been replaced by **upgradeable core contracts** usi
 | Distributor | `0xB2225f2e9a26688D43bC01A8Cf7aD4B179154c47` | Claimable airdrop contract. |
 | BRT/WPOL Pair | `0xc445b18b3ff85e0691fe416ad91e456f8697b166` | Liquidity pair |
 | Gnosis Safe | `0x64A7ef92229D2D97d1C4fd3DB15Db2d94d3D66F6` | Multi-sig wallet for team and marketing funds. |
-| hNobtCoreStaking (proxy) | `0x1d7d8a7B24Be9ecc692f36c7C01486EfF6c689d7` | hNOBT staking (UUPS, fixed) |
-| BroilerCoreStaking (proxy) | `0xF68A17c7e15174D55AFDb2EF7669Ad04F561AD48` | BRT/WPOL LP mining (UUPS, fixed) |
+| hNobtCoreStaking (proxy) | `0x1d7d8a7B24Be9ecc692f36c7C01486EfF6c689d7` | hNOBT staking contract |
+| BroilerCoreStaking (proxy) | `0xF68A17c7e15174D55AFDb2EF7669Ad04F561AD48` | BRT/WPOL LP mining contract |
 | hNobtCoreStaking (impl) | `0x6C7679B3E1967A00eA3BF0cDA61D8bcCDF117965` | Implementation (verified) |
 | BroilerCoreStaking (impl) | `0x5355528995CAfC401997f30B98078f3101661b28` | Implementation (verified) |
 
