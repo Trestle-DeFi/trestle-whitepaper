@@ -1,12 +1,15 @@
 # Trestle DeFi: A Decentralized Marketplace for Digital Assets, Freelancer Services, and Real-World Assets (RWA)
 
-**Version:** 1.0 | **Date:** June 2026 |
+**Version:** 1.2 | **Date:** July 2026 |
 **Status:** Live on Polygon Mainnet & Amoy Testnet
 **Mainnet** Core Staking & Liquidity Mining (hNOBT, BroilerPlus, Distributor) ✅ Live.
 **Testnet** (Amoy): Marketplace Escrow, Dutch Auction, and RWA Infrastructure ✅ Live.
 **Mainnet** Marketplace: 🚧 In Development / Audit Phase.
 
-**Disclaimer:** Not affiliated with Trestle Protocol (Celestia Bridge).
+---
+
+**Legal Disclaimer:** Trestle DeFi (trestle.website) is an independent Web3 ecosystem operating exclusively on the Polygon network. We are not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Celestia-based "Trestle Protocol" bridge project or any of its subsidiaries. 
+
 ---
 
 ## Table of Contents
@@ -308,22 +311,34 @@ Trestle Platform uses **Cloudflare Workers** with a **serverless microservices a
 | Telegram Mini-App | https://t.me/trestlehub_bot/app | ✅ Live |
 | Testnet Marketplace | https://testnet.trestle.website | ✅ Live (Amoy) |
 | Mainnet Marketplace | https://trestle.website | 🚧 Coming Soon |
+| **Blog** | https://blog.trestle.website | 📝 Updates & Announcements |
 
 ---
 
 ## Current Projects and Progress
+
+### Core Staking Contracts (Upgradeable UUPS — Deployed 2026-07-07)
+
+The V1 and V2 contracts have been replaced by **upgradeable core contracts** using the UUPS proxy pattern (ERC-1967). All V1/V2 stakes have been successfully withdrawn. The legacy V1/V2 contracts are now drained and unused.
+
+| Contract | Core Proxy (Live) |
+|----------|-------------------|
+| hNobtCoreStaking | `0x1d7d8a7B24Be9ecc692f36c7C01486EfF6c689d7` |
+| BroilerCoreStaking | `0xF68A17c7e15174D55AFDb2EF7669Ad04F561AD48` |
 
 ### Deployed Contracts
 
 | Contract | Address | Purpose |
 |----------|---------|---------|
 | hNOBT | `0xcF51ab7398315DbA6588Aa7fb3Df7c99D3D1F4dD` | Community growth token (airdrops, referrals). |
-| BroilerPlus | `0xeCb4cAc0C9e5cBd42a9Ed36467ce8f96072AD58b` | Liquidity anchor token (staking, LP mining). |
+| BroilerPlus | `0xeCb4cAc0C9e5cBd42a9Ed36467ce8f96072AD58b` | Liquidity anchor token (staking, LP mining). Note: BRT has a 5% transfer tax; on-chain rewards are grossed up so users receive the full advertised amount. |
 | Distributor | `0xB2225f2e9a26688D43bC01A8Cf7aD4B179154c47` | Claimable airdrop contract. |
 | BRT/WPOL Pair | `0xc445b18b3ff85e0691fe416ad91e456f8697b166` | Liquidity pair |
 | Gnosis Safe | `0x64A7ef92229D2D97d1C4fd3DB15Db2d94d3D66F6` | Multi-sig wallet for team and marketing funds. |
-| hNobtStaking | `0xea905C9B1a0e0c598B8F77107A7Ed03f41F2e093` | hNOBT staking contract |
-| BroilerPlusStaking | `0x56C3e1d8Fa3723CA2aeb024337C1297167D6F45B` | BroilerPlus staking contract |
+| hNobtCoreStaking (proxy) | `0x1d7d8a7B24Be9ecc692f36c7C01486EfF6c689d7` | hNOBT staking (UUPS, fixed) |
+| BroilerCoreStaking (proxy) | `0xF68A17c7e15174D55AFDb2EF7669Ad04F561AD48` | BRT/WPOL LP mining (UUPS, fixed) |
+| hNobtCoreStaking (impl) | `0x6C7679B3E1967A00eA3BF0cDA61D8bcCDF117965` | Implementation (verified) |
+| BroilerCoreStaking (impl) | `0x5355528995CAfC401997f30B98078f3101661b28` | Implementation (verified) |
 
 ### Liquidity Pools
 
@@ -411,14 +426,15 @@ getPrice() = startingPrice - (discountRate × timeElapsed)
 ## Social Media and Resources
 
 - **Website**: [https://trestle.website](https://trestle.website)
-- **Reward Hub**: [https://reward.trestle.website](https://reward.trestle.website)
-- **Testnet Hub**: [https://testnet.trestle.website](https://testnet.trestle.website)
+- **Testnet Hub**: [Testnet Hub](https://testnet.trestle.website)
+- **Reward Hub**: [Reward Hub](https://reward.trestle.website)
+- **GitHub**: [Trestle DeFi](https://github.com/Trestle-DeFi)
 - **Documentation**: [https://docs.trestle.website](https://docs.trestle.website)
-- **GitHub**: [https://github.com/Trestle-DeFi](https://github.com/Trestle-DeFi)
-- **Telegram Group**: [https://t.me/TrestleDeFi](https://t.me/TrestleDeFi)
-- **Telegram Mini-App**: [https://t.me/trestlehub_bot/app](https://t.me/trestlehub_bot/app)
-- **Discord**: [https://discord.gg/4dCCvnJYGT](https://discord.gg/4dCCvnJYGT)
-
+- **Medium**: [Trestle DeFi](https://medium.com/@trestle_defi)
+- **Discord**: [Trestle DeFi](https://discord.gg/4dCCvnJYGT)
+- **Telegram**: [trestleDeFi](https://t.me/trestleDeFi)
+- **Telegram App**: [trestlehub_bot](https://t.me/trestlehub_bot)
+- **Email**: contact@trestle.website
 ---
 
 ## Conclusion
