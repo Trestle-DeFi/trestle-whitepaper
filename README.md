@@ -22,7 +22,8 @@
 7. [Roadmap](#roadmap)
 8. [Current Projects and Progress](#current-projects-and-progress)
 9. [Why Trestle?](#why-trestle)
-10. [Social Media and Resources](#social-media-and-resources)
+10. [Bug Bounty Program](#bug-bounty-program)
+11. [Social Media and Resources](#social-media-and-resources)
 
 ---
 
@@ -402,17 +403,77 @@ getPrice() = startingPrice - (discountRate × timeElapsed)
 
 ---
 
-### Audit & Security Status
+### Team Member Allocations
 
-**Phase:** Testnet (Amoy) Beta
-**Approach:** Community-Driven Audit & Bug Bounties
+Team rewards are performance-based, calculated weekly, and accrued inside the project points ledger. **To claim team rewards:** Join [reward.trestle.website](https://reward.trestle.website), link your wallet, and complete weekly task validation.
 
-**Rewards:**
-- **Critical Bugs:** Governance Points + "Security Scout" status (priority allocation for future Governance Token airdrop).
-- **High/Medium Bugs:** hNOBT points via the Telegram Reward Hub.
-- **Reporting:** All vulnerabilities via Discord Security Channel or GitHub Issues (Private).
-- **Hall of Fame:** Top contributors listed permanently in the Security Contributors section.
-- **Future:** Upon Mainnet launch with TVL, transitions to a cash-based bounty via Immunefi or similar platforms.
+| Team Role | Tasks / Deliverables | Weekly Base Reward (hNOBT) | Weekly Base Reward (xGov) |
+|-----------|---------------------|---------------------------|--------------------------|
+| **Trial Mod** | • Greet new members within 2 hours.<br>• Moderate chat & remove scam links.<br>• Maintain a minimum of 3 active threads/week. | 1,000 hNOBT | 50 xGov |
+| **Growth Lead** | • Seed posts in Polygon HQ & developer groups.<br>• Bring a minimum of 5 verified active members/week.<br>• Amplify social milestones on X / Bluesky. | 2,000 hNOBT | 100 xGov |
+| **Core Dev / Architect** | • Technical code reviews on GitHub.<br>• Infrastructure testing.<br>• Custom smart contract optimization suggestions. | 5,000 hNOBT | 500 xGov |
+
+---
+
+### Bug Bounty Program
+
+We actively incentivize global whitehat researchers and ecosystem developers to stress-test our codebase. All hNOBT rewards are 10× the base rate. Rewards are determined by technical impact and are paid out directly from the project treasury.
+
+**To claim rewards:** Join [reward.trestle.website](https://reward.trestle.website), submit your vulnerability report, and complete verification. All team allocations and bug bounty payouts are processed through the reward hub.
+
+#### Reward Tiers
+
+| Severity | Target Systems & Scope | hNOBT Reward | xGov Reward | Payout Release |
+|----------|------------------------|--------------|-------------|----------------|
+| 🔴 **Critical (S1)** | • Escrow protocol bypassing vectors.<br>• Dutch Auction pricing or clearing logic exploits.<br>• Wallet-draining smart contract flaws. | 100,000 hNOBT | 2,500 xGov | **Instant Release** *(Within 48 hours of patch)* |
+| 🔥 **High (S2)** | • Deadlocked contract states.<br>• Transaction verification loop failures.<br>• Telegram Mini-App backend API manipulation. | 50,000 hNOBT | 1,000 xGov | **7-Day Security Hold** |
+| ⚡ **Medium (S3)** | • RPC node desynchronization errors.<br>• App state integration dropping inside Telegram.<br>• Incorrect event emission configurations. | 20,000 hNOBT | 250 xGov | **14-Day Processing Cycle** |
+| 🟡 **Low (S4)** | • Text typos in documentation.<br>• Layout shifting/cropping inside webviews.<br>• UI styling/cosmetic discrepancies. | 2,500 hNOBT | 0 xGov | **End of Testnet Phase** |
+
+#### Submission Format
+
+To claim eligible technical rewards, researchers must submit their private findings to our secure pipeline via **contact@trestle.website** containing:
+
+- **Vulnerability Title:** Summary of the identified exploit vector.
+- **Steps to Reproduce:** Clean, step-by-step description to reconstruct the issue.
+- **Proof of Concept (PoC):** Code script execution or an active Amoy Testnet Transaction Hash validating the exploit.
+
+#### Scope
+
+**In Scope:** Smart contracts (BiometricVerification, RewardDistributor, VaultSettlement), frontend security issues, document verification bypasses, public API misconfigurations.
+
+**Out of Scope:** UI/UX issues (not security), missing features, already reported issues, social engineering attacks, third-party integrations (Lens, Farcaster, etc.), private/internal code.
+
+#### Sybil-Defense Rules
+
+1. **Proof-of-Concept Requirement:** No S1, S2, or S3 bug bounty points will be logged without an accompanying active **Polygon Amoy Testnet Transaction Hash** or a valid, reproducible local code fork.
+
+2. **Retention Rule:** Growth referrals are only counted if the incoming users pass Trestle Telegram/Discord captcha gate and stay active for at least 72 hours.
+
+3. **Multi-Account Rule:** If two different profiles (e.g., Joe and Cress) submit identical bugs or referral lists, the payout is split 50/50 or canceled entirely pending identity verification.
+
+#### Payout Options
+
+Join [reward.trestle.website](https://reward.trestle.website) to validate and claim rewards. Two options:
+
+| Option | Requirements | Team Payout | Bug Bounty Payout |
+|--------|-------------|-------------|-------------------|
+| **A: Full Reward** | Stage 1 (Gitcoin Passport + Accounts) + Stage 2 (Biometric) | 100% hNOBT + 100% xGov | 100% hNOBT + 100% xGov |
+| **B: Early Withdrawal** | Stage 1 (Gitcoin Passport + Accounts) only | 25% hNOBT + 0 xGov | 50% hNOBT + 0 xGov |
+
+#### Response Timeline
+
+- **Initial acknowledgement:** 48 hours
+- **Triage & validation:** 7 days
+- **Reward distribution:** 14 days after validation
+
+#### Hall of Fame
+
+Contributors whose reports are accepted will be listed in the Security Contributors section, eligible for Security Scout NFT badge, and considered for future Governance Token allocation.
+
+#### Future: Immunefi Transition
+
+Upon Mainnet launch with TVL, this transitions to cash-based bounties ($100–$100,000+ depending on severity) via Immunefi.
 
 ## Social Media and Resources
 
@@ -421,6 +482,8 @@ getPrice() = startingPrice - (discountRate × timeElapsed)
 - **Reward Hub**: [Reward Hub](https://reward.trestle.website)
 - **GitHub**: [Trestle DeFi](https://github.com/Trestle-DeFi)
 - **Documentation**: [https://docs.trestle.website](https://docs.trestle.website)
+- **X (Twitter)**: [Trestle DeFi](https://x.com/Trestle_0xArch)
+- **BlueSky**: [Trestle DeFi](https://bsky.app/profile/trestle-0xarch.bsky.social)
 - **Medium**: [Trestle DeFi](https://medium.com/@trestle_defi)
 - **Discord**: [Trestle DeFi](https://discord.gg/4dCCvnJYGT)
 - **Telegram**: [trestleDeFi](https://t.me/trestleDeFi)
