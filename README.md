@@ -409,7 +409,7 @@ Team rewards are performance-based, calculated weekly, and accrued inside the pr
 
 | Team Role | Tasks / Deliverables | Weekly Base Reward (hNOBT) | Weekly Base Reward (xGov) |
 |-----------|---------------------|---------------------------|--------------------------|
-| **Trial Mod** | • Greet new members within 2 hours.<br>• Moderate chat & remove scam links.<br>• Maintain a minimum of 3 active threads/week. | 1,000 hNOBT | 50 xGov |
+| **Moderator** | • Greet new members within 2 hours.<br>• Moderate chat & remove scam links.<br>• Maintain a minimum of 3 active threads/week. | 1,000 hNOBT | 50 xGov |
 | **Growth Lead** | • Seed posts in Polygon HQ & developer groups.<br>• Bring a minimum of 5 verified active members/week.<br>• Amplify social milestones on X / Bluesky. | 2,000 hNOBT | 100 xGov |
 | **Core Dev / Architect** | • Technical code reviews on GitHub.<br>• Infrastructure testing.<br>• Custom smart contract optimization suggestions. | 5,000 hNOBT | 500 xGov |
 
